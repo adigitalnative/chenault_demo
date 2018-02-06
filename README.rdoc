@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a super-basic app to demonstrate some simple database things in Ruby.
 
-Things you may want to cover:
+db/schema.rb has the database schema, which is automatically created by running and modifying the files in...
+  db/migrate/...
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Each database table is referenced by a MODEL, which is described in app/models/...
+In this super-simple example, the only thing each model does (beyond basic things that come with models like giving you their stored data from the database) is know that there is a relationship between Projects and Tasks: Projects can have many tasks, tasks have one project.
+In a full-fledged app, additional business logic, validations, etc would live in the model file.
